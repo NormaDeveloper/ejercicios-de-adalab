@@ -1,0 +1,15 @@
+.container {
+  width: 500px;
+  height: 500px;
+  border-color: aqua;
+  border-style: solid;
+  display: flex;
+  flex-direction: column; /* eje principal es vertical */
+  /*flex-direction: row;*/ /* eje principal es horizontal */
+}
+
+.item {
+  border-color: rgb(165, 28, 28);
+  border-style: solid;
+  background-color: coral;
+}

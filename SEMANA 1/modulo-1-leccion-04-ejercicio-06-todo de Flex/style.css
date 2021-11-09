@@ -1,0 +1,52 @@
+* {
+  margin: 0;
+}
+
+.big-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100vw;
+  height: 100vh;
+  max-width: 960px;
+  background-color: cyan;
+  border-color: darkgreen;
+  border-style: solid;
+  justify-content: center;
+  align-items: center;
+
+  align-content: stretch;
+}
+
+.container-header {
+  background-color: red;
+  color: black;
+  order: -1;
+}
+
+.aside1 {
+  background-color: yellow;
+  color: black;
+  flex: 1;
+  order: 1;
+}
+
+.text {
+  background-color: rgb(0, 140, 255);
+  color: black;
+  order: 2;
+  flex-basis: 70%;
+}
+
+.aside2 {
+  background-color: pink;
+  color: black;
+  order: 3;
+  flex: 3;
+}
+
+.container-footer {
+  background-color: rgb(18, 192, 18);
+  color: black;
+  order: 4;
+}

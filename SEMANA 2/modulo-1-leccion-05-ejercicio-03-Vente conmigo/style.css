@@ -1,0 +1,19 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  background-color: blue;
+  position: relative;
+  width: 50%;
+  top: 20vh;
+}
+
+.header {
+  background-color: purple;
+  width: 50%;
+  height: 20vh;
+  position: fixed;
+  z-index: 4;
+}

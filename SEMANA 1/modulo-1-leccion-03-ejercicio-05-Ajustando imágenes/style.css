@@ -1,0 +1,21 @@
+* {
+  box-sizing: border-box;
+}
+
+.picture {
+  height: 100px;
+  width: 100px;
+  border: 5px;
+  border-color: brown;
+  border-style: solid;
+  padding: 10px;
+  margin: auto;
+}
+
+.image {
+  height: 100px;
+  width: 100px;
+  border: 5px;
+  border-color: brown;
+  padding: 10px;
+}

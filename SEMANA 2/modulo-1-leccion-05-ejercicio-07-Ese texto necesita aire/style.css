@@ -1,0 +1,15 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  position: relative;
+  max-width: 600px;
+}
+
+.hijo {
+  position: absolute;
+  width: 86%;
+  transform: translate(100%, 0);
+}

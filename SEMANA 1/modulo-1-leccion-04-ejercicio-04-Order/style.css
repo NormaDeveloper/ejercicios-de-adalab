@@ -1,0 +1,16 @@
+.big-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap-reverse;
+  align-items: stretch;
+  background-color: cyan;
+  border-color: darkgreen;
+  border-style: solid;
+}
+
+.container {
+  background-color: red;
+  border-color: rgb(100, 0, 95);
+  border-style: solid;
+  flex-grow: 1;
+}
