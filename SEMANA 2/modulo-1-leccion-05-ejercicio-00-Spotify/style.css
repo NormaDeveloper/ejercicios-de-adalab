@@ -3,6 +3,11 @@
   padding: 0;
 }
 
+body {
+  height: 100vh;
+  font-family: spotify-circular, Helvetica, Arial, sans-serif;
+}
+
 .header {
   display: flex;
   background-color: black;
@@ -34,21 +39,47 @@ ul {
   background-color: cornflowerblue;
   color: white;
   height: 50vh;
-  padding: 25px;
+  padding: 30px;
+  position: relative;
 }
 
 h1 {
-  font-size: 100px;
+  font-size: 90px;
 }
 
 h2 {
-  font-size: 50px;
+  font-size: 60px;
 }
 
 .plans {
+  position: absolute;
+  display: block;
   font-size: 30px;
+  background-color: rgb(31, 215, 96);
+  width: 95%;
+  height: 100px;
+  border-radius: 50px;
+  text-align: center;
+  bottom: 200px;
 }
 
-p {
-  font-size: 20px;
+.términos p {
+  font-size: 25px;
+  position: absolute;
+  bottom: 70px;
+  width: 80%;
+  text-align: left;
+  left: 13%;
+}
+
+.escucha {
+  position: absolute;
+  bottom: 350px;
+  width: 90%;
+  text-align: left;
+}
+
+.premium {
+  position: absolute;
+  top: 130px;
 }
