@@ -8,83 +8,120 @@
 
   <body>
     <header class="header">
-      <img src="logo.png" alt="logo Spotify" class="logo" />
-
-      <nav>
-        <img src="menu-icon.png" alt="Menu" class="menu" />
-        <!-- <ul>
-          <li>Premium</li>
-          <li>Ayuda</li>
-          <li>Descarga</li>
-        </ul> -->
+      <img class="logo" src="logo.png" alt="logo Spotify" />
+      <img class="menu" src="menu-icon.png" alt="Menu" />
+      <nav class="nav">
+        <ul class="list">
+          <li class="li-main-nav">
+            <a href="">Premium </a>
+          </li>
+          <li class="li-main-nav help">
+            <a href="">Ayuda</a>
+          </li>
+          <li class="li-main-nav">
+            <a href="">Descargar</a>
+          </li>
+          <il class="bar li-main-nav"> | </il>
+          <li class="li-main-nav sign-up">
+            <a href="">Registrarse</a>
+          </li>
+          <li class="li-main-nav">
+            <a href="">Iniciar sesión</a>
+          </li>
+        </ul>
       </nav>
     </header>
 
-    <main>
+    <main class="main">
       <section class="blue-section">
-        <span class="premium">
-          <h1>Prueba Premium gratis 3 meses</h1>
-        </span>
-        <span class="escucha">
-          <h2>
-            Escucha millones de canciones sin anuncios, a la carta y sin
-            conexión.
-          </h2>
-        </span>
-        <a class="plans">VER PLANES</a>
+        <h1 class="premium">Prueba Premium gratis 3 meses</h1>
 
-        <span class="términos">
-          <p>
-            Rigen términos y condiciones. Los tres meses gratis no están
-            disponibles para usuarios que ya hayan probado Premium.
-          </p>
-        </span>
+        <h2 class="listen">
+          Escucha millones de canciones sin anuncios, a la carta y sin conexión.
+        </h2>
+
+        <a class="plans-button" href="#">VER PLANES</a>
+
+        <p class="conditions">
+          Rigen términos y condiciones. Los tres meses gratis no están
+          disponibles para usuarios que ya hayan probado Premium.
+        </p>
       </section>
 
-      <section>
-        <h2>¿Por qué pasarte a premium?</h2>
-        <article>
-          <img />
-          <h3>Descarga música</h3>
-          <p>Llévala siempre contigo.</p>
+      <section class="white-section">
+        <h2 class="h2-white-section">¿Por qué pasarte a Premium?</h2>
+
+        <article class="article">
+          <img
+            class="white-section-image"
+            src="./benefit-1.png"
+            alt="Sin anuncios"
+          />
+          <div class="text-white-section">
+            <h3>Descarga música.</h3>
+            <p class="no-ads">Llévala siempre contigo.</p>
+          </div>
         </article>
 
-        <article>
-          <img />
-          <h3>Sin anuncios.</h3>
-          <p>Disfruta de música sin interrupciones.</p>
+        <article class="article">
+          <img
+            class="white-section-image"
+            src="./benefit-2.png"
+            alt="Sin anuncios"
+          />
+          <div class="text-white-section">
+            <h3>Sin anuncios.</h3>
+            <p>Disfruta de música sin interrupciones.</p>
+          </div>
         </article>
 
-        <article>
-          <img />
-          <h3>Escucha lo que quieras.</h3>
-          <p>Incluso en el móvil.</p>
+        <article class="article">
+          <img
+            class="white-section-image"
+            src="./benefit-3.png"
+            alt="Escucha"
+          />
+          <div class="text-white-section">
+            <h3>Escucha lo que quieras.</h3>
+            <p>Incluso en el móvil.</p>
+          </div>
         </article>
 
-        <article>
-          <img />
-          <h3>Salta todas las canciones que quieras.</h3>
-          <p>Simplemente dale a siguiente.</p>
+        <article class="article">
+          <img
+            class="white-section-image"
+            src="./benefit-4.png"
+            alt="Salta las canciones"
+          />
+          <div class="text-white-section">
+            <h3>Salta todas las canciones que quieras.</h3>
+            <p>Simplemente dale a siguiente.</p>
+          </div>
         </article>
       </section>
     </main>
 
-    <footer>
-      <section>
-        <ul>
-          <li>Legal</li>
-          <li>Cookies</li>
-          <li>Información sobre los anuncios</li>
+    <footer class="footer">
+      <nav class="nav-footer">
+        <ul class="footer-ul">
+          <li>
+            <a class="footer-a legal-footer" href="#">Legal</a>
+          </li>
+          <li>
+            <a class="footer-a" href="#">Cookies</a>
+          </li>
+          <li>
+            <a class="footer-a" href="#">Información sobre los anuncios</a>
+          </li>
         </ul>
-      </section>
+      </nav>
 
-      <section>
-        <div>
-          <p>España</p>
-          <img />
-        </div>
+      <div class="footer-div">
+        <p class="esp">España</p>
+
+        <img class="img-esp" src="./es.svg" alt="" />
         <p>© 2019 Spotify AB</p>
-      </section>
+      </div>
     </footer>
   </body>
 </html>
