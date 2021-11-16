@@ -1,0 +1,15 @@
+.page__footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100vw;
+  padding: 1rem;
+  color: $color-secondary;
+}
+
+.button {
+  border: 5px solid;
+  height: 45px;
+  padding: 0 20px;
+  background-color: red;
+}

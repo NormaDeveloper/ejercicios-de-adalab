@@ -1,0 +1,30 @@
+.card {
+  width: 100px;
+  height: 100px;
+  margin: 10px;
+  &--dark {
+    background-color: #000;
+    color: #fff;
+  }
+  &--light {
+    background-color: #fff;
+    color: #000;
+  }
+  &:hover {
+    box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+  }
+}
+
+// -------Ejercicio 3---
+
+.title {
+  font-size: 16px;
+
+  @media (min-width: 768px) {
+    font-size: 18px;
+  }
+
+  @media (min-width: 1024px) {
+    font-size: 20px;
+  }
+}
