@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form action="https://adalab-server-form.herokuapp.com/" method="post">
+      <label for="firstName">Nombre</label>
+      <input
+        placeholder="Escribe aquí tu nombre"
+        id="secondName"
+        type="text"
+        name="secondName"
+      />
+      <label for="secondName">Apellido</label>
+      <input
+        placeholder="Escribe aquí tu apellido"
+        id="secondName"
+        type="text"
+        name="secondName"
+      />
+      <label for="email">Correo electrónico</label>
+      <input
+        placeholder="Escribe aquí tu correo"
+        id="email"
+        type="email"
+        name="email"
+      />
+      <label for="street">Calle</label>
+      <input
+        placeholder="Escribe aquí tu calle"
+        id="street"
+        type="text"
+        name="street"
+        required
+      />
+      <label for="town">Ciudad</label>
+      <input
+        placeholder="Escribe aquí tu ciudad"
+        id="town"
+        type="text"
+        name="town"
+        value="Madrid"
+      />
+      <label for="telephone">Teléfono</label>
+      <input
+        id="telephone"
+        type="tel"
+        placeholder="Escribe aquí tu teléfono"
+        name="telephone"
+      />
+      <label for="password">Contraseña</label>
+      <input
+        placeholder="Escribe aquí tu contraseña"
+        id="password"
+        type="password"
+        name="password"
+      />
+      <input type="submit" value="ENVIAR" />
+      <input
+        type="text"
+        id="address"
+        name="address"
+        value="Calle Méndez Álvaro"
+        disabled
+      />
+    </form>
+  </body>
+</html>
