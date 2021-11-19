@@ -1,0 +1,102 @@
+* {
+  box-sizing: inherit;
+  transition-property: all;
+  transition-duration: 0.6s;
+  transition-timing-function: ease;
+}
+html,
+body {
+  box-sizing: border-box;
+  height: 100%;
+  width: 100%;
+  background: white;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+}
+
+.formulario-container {
+  text-align: center;
+}
+
+.formulario-container form {
+  margin: 0 auto;
+  width: 300px;
+  border: 1px solid rgba(21, 144, 152, 0.31);
+  padding: 50px;
+}
+
+.container {
+  display: table-cell;
+  padding: 1em;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.formulario-container form input:first-child {
+  margin-top: 0;
+}
+
+button {
+  border: none;
+  background: #159098;
+  cursor: pointer;
+  border-radius: 3px;
+  padding: 6px;
+  width: 200px;
+  color: white;
+  margin-left: 0;
+  box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.2);
+}
+
+button:hover {
+  -webkit-transform: translateY(-3px);
+  -ms-transform: translateY(-3px);
+  transform: translateY(-40px);
+  box-shadow: 0 6px 6px 0 rgba(0, 0, 0, 0.2);
+}
+input {
+  margin: 40px 0;
+  width: 200px;
+  display: block;
+  border: none;
+  padding: 10px 0;
+  border-bottom: solid 1px #159098;
+  -webkit-transition: all 0.3s cubic-bezier(0.64, 0.09, 0.08, 1);
+  transition: all 0.3s cubic-bezier(0.64, 0.09, 0.08, 1);
+  background: -webkit-linear-gradient(
+    top,
+    rgba(255, 255, 255, 0) 96%,
+    #159098 4%
+  );
+  background: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0) 96%,
+    #159098 4%
+  );
+  background-position: -200px 0;
+  background-size: 200px 100%;
+  background-repeat: no-repeat;
+  color: #159098;
+}
+
+input:focus,
+input:valid {
+  box-shadow: none;
+  outline: none;
+  background-position: 0 0;
+}
+
+input::-webkit-input-placeholder {
+  font-family: "roboto", sans-serif;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+input:focus::-webkit-input-placeholder,
+input:valid::-webkit-input-placeholder {
+  color: #159098;
+  font-size: 11px;
+  -webkit-transform: translateY(-10px);
+  transform: translateY(-10px);
+  visibility: visible;
+}

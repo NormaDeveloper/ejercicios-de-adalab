@@ -1,0 +1,37 @@
+body {
+  margin: 0;
+}
+.hero {
+  background: url(https://images.unsplash.com/photo-1445112098124-3e76dd67983c?auto=format&fit=crop&w=1347&q=80)
+    center center no-repeat;
+  background-size: cover;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero__scroll-down {
+  transform: translateX(-50%);
+  font-family: verdana, sans-serif;
+  color: white;
+  font-size: 2em;
+  position: absolute;
+  bottom: 2em;
+  left: 50%;
+  animation-name: flux;
+  animation-duration: 3s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+}
+
+@keyframes flux {
+  0% {
+    top: 0%;
+  }
+
+  100% {
+    top: 50%;
+  }
+}
