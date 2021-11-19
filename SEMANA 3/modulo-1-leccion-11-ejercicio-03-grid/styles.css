@@ -1,0 +1,32 @@
+body {
+  margin: 0;
+}
+.wrapper {
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+}
+.item {
+  background: deeppink;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.item1,
+.item4 {
+  background-color: pink;
+}
+.item1,
+.item4 {
+  grid-column: span 12;
+}
+.item2 {
+  grid-column: span 4;
+  background-color: red;
+}
+.item3 {
+  grid-column: span 8;
+  background-color: green;
+}
