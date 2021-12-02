@@ -1,3 +1,7 @@
+:root {
+  --calculado: calc(100vh - 200px);
+}
+
 body {
   background: #14d9c4;
   font-family: arial, sans-serif;
@@ -11,22 +15,24 @@ body {
   grid-template-rows: repeat(4, 1fr);
   grid-template-columns: repeat(4, 1fr);
   grid-gap: 20px;
-  height: 100vh;
+  /* height: 100vh; */
   box-sizing: border-box;
 }
+
 .box {
   background: #d0f7f3;
   position: relative;
   padding: 20px;
   box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
-  height: 100%;
+  height: 200px;
   box-sizing: border-box;
-  transform: translateY(200px);
-  transition: all 1.5s ease;
-  transition-duration: 1s;
+  transform: translateY(var(--calculado));
+  transition: transform 5s ease;
+  /* (calc(100vh-200px) */
 }
-.box:hover {
-  transform: translateY(-200px);
+
+body:hover .box {
+  transform: translateY(40vh);
 }
 .box__label {
   position: absolute;
@@ -35,5 +41,5 @@ body {
   top: 1em;
   font-size: 9px;
   text-transform: uppercase;
-  transition-timing: transform 0.5;
+  /* transition-timing: transform 0.5; */
 }
