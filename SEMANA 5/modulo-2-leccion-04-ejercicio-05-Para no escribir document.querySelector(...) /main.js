@@ -3,7 +3,7 @@ function getEl(selector) {
   const element = document.querySelector(selector);
   return element;
 }
-const label = getEl('.js_p');
+const label = getEl('.js-label');
 const parseElement = parseInt(label.innerHTML);
 console.log(parseElement);
 
