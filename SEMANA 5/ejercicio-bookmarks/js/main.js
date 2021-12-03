@@ -7,24 +7,12 @@ const bmk_1_desc = "JS en los materiales de Adalab";
 const bmk_1_seen = "checked";
 const bmk_1_tags_1 = "javascript";
 const bmk_1_tags_2 = "html";
-
 const section = document.querySelector(".js-section");
-const tableview = document.querySelector(".tableview");
-const listview = document.querySelector(".listview");
+const input_search_desc = document.querySelector(".js_in_search_desc");
+const menuDropdown = document.querySelector('.js-menudropdown');
 
-if(section.classList.contains('tableview')) {
-  section.classList.remove('tableview');
-  section.classList.add('listview');
-}
-else if (section.classList.add('listview')){
-  section.classList.remove('listview');
-  section.classList.add('tableview');
-}
-
-    
-    
-
-
+/* DIA3.2 Se muestra el menú hamburguesa */
+menuDropdown.classList.remove('collapsed');
 
 
 let html = `<li class="data__listitem"> 
@@ -97,6 +85,19 @@ html += `<li class="data__listitem">
 
 
 listLinks.innerHTML = html;
+
+
+/*  Mostrar lista o tabla */
+
+if(section.classList.contains('tableview')) {
+  section.classList.remove('tableview');
+  section.classList.add('listview');
+}
+else if (section.classList.contains('listview')){
+  section.classList.remove('listview');
+  section.classList.add('tableview');
+}
+
 
 
 
