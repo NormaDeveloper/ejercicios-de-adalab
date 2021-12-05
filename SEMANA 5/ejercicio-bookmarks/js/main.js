@@ -4,19 +4,31 @@ const listLinks = document.querySelector(".js_datalist");
 
 const bmk_1_url = "https://books.adalab.es/materiales-del-curso-n/-MdR6Gp68BX20m1pi0z2/modulo-2-programando-la-web/javascript/2_1_intro_a_la_programacion";
 const bmk_1_desc = "JS en los materiales de Adalab";
-const bmk_1_seen = "checked";
+
 
 const bmk_2_url = "https://thesmartcoder.dev/9-awesome-projects-you-can-build-with-vanilla-javascript/";
 const bmk_2_desc = "Ideas de proyectos JS";
-const bmk_2_seen = "checked";
+
 
 const bmk_3_url = "https://books.adalab.es/materiales-del-curso-n/-MdR6Gp68BX20m1pi0z2/modulo-1-html-y-css/1_1_intro_a_la_web"
 const bmk_3_desc = "HTML en los materiales de Adalab";
-const bmk_3_seen = "";
 
 
 const section = document.querySelector(".js-section");
 const input_search_desc = document.querySelector(".js_in_search_desc");
+
+
+
+
+/* Muestra el menú hamburguesa */
+const menuDropdown = document.querySelector('.js-menudropdown');
+menuDropdown.classList.remove('collapsed');
+
+
+/*Simulamos que escribe la usuaria en el input */
+input_search_desc.value = "materiales";
+const descrSearchText = input_search_desc.value;
+
 
 
 
@@ -63,17 +75,37 @@ let ulTags3 =`<ul class="item__tags">
 
 hasTags ();
 
-/* Muestra el menú hamburguesa */
-const menuDropdown = document.querySelector('.js-menudropdown');
-menuDropdown.classList.remove('collapsed');
 
 
-/*Simulamos que escribe la usuaria en el input */
-input_search_desc.value = "materiales";
-const descrSearchText = input_search_desc.value;
+// Ej 4. BONUS. Cambia el valor de la variable bmk_1_seen a true o false. En dependencia de este valor muestra seleccionado o no el input de tipo checkbox.
+
+const bmk_1_seen = true; //"checked"
+const bmk_2_seen = true; //checked
+const bmk_3_seen = false; // ''
+
+
+const check1 = bmk_1_seen === true ? 'checked' : '';
+const check2 = bmk_2_seen === true ? 'checked' : '';
+const check3 = bmk_3_seen === true ? 'checked' : '';
+
+
+
+/*  Mostrar lista o tabla */
+
+if(section.classList.contains('tableview')) {
+  section.classList.remove('tableview');
+  section.classList.add('listview');
+}
+else if (section.classList.contains('listview')){
+  section.classList.remove('listview');
+  section.classList.add('tableview');
+}
+
 
 
 let html = ''
+
+
 
 
 if (bmk_1_desc.includes(descrSearchText)) {
@@ -85,7 +117,7 @@ html = `<li class="data__listitem">
     </a>
   </p>
   <p class="item__seen">
-    <input type="checkbox" checked name="item_imp_2" id="item_imp_2">
+    <input type="checkbox" ${check1} name="item_imp_2" id="item_imp_2">
   </p>
   <p class="item__desc">${bmk_1_desc}</p>
   ${ulTags1}
@@ -103,7 +135,7 @@ html += `<li class="data__listitem">
     </a>
   </p>
   <p class="item__seen">
-    <input type="checkbox" checked name="item_imp_2" id="item_imp_2">
+    <input type="checkbox" ${check2} name="item_imp_2" id="item_imp_2">
   </p>
   <p class="item__desc">${bmk_2_desc.toLowerCase()}</p>
   
@@ -122,7 +154,7 @@ html += `<li class="data__listitem">
     </a>
   </p>
   <p class="item__seen">
-    <input type="checkbox" ${bmk_3_seen} name="item_imp_2" id="item_imp_2">
+    <input type="checkbox" ${check3}  name="item_imp_2" id="item_imp_2">
   </p>
   <p class="item__desc">${bmk_3_desc}</p>
   ${ulTags3}
@@ -133,19 +165,6 @@ html += `<li class="data__listitem">
 
 
 listLinks.innerHTML = html;
-
-
-/*  Mostrar lista o tabla */
-
-if(section.classList.contains('tableview')) {
-  section.classList.remove('tableview');
-  section.classList.add('listview');
-}
-else if (section.classList.contains('listview')){
-  section.classList.remove('listview');
-  section.classList.add('tableview');
-}
-
 
 
 
