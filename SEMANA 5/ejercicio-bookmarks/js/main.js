@@ -83,7 +83,6 @@ const bmk_1_seen = true; //"checked"
 const bmk_2_seen = true; //checked
 const bmk_3_seen = false; // ''
 
-
 const check1 = bmk_1_seen === true ? 'checked' : '';
 const check2 = bmk_2_seen === true ? 'checked' : '';
 const check3 = bmk_3_seen === true ? 'checked' : '';

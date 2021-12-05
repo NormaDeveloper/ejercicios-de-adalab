@@ -1,0 +1,11 @@
+.button {
+  height: 100px;
+  width: 200px;
+  padding: 20px auto;
+  background-color: cyan;
+  border: solid blue 3px;
+}
+
+.off {
+  opacity: 0.5;
+}
