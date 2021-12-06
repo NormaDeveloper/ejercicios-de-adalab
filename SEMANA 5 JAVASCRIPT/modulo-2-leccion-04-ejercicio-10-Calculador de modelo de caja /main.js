@@ -1,6 +1,6 @@
 "use strict";
-let borderBoxWidth = 0;
-let contentBoxWidth = 0;
+let borderBoxWidth;
+let contentBoxWidth;
 
 const calculator = (borderBox, boxWidth, padding, borderSize) => {
   if (borderBox === true) {
