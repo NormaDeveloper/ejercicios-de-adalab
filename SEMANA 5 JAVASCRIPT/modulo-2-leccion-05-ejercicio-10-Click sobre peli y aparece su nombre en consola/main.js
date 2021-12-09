@@ -25,9 +25,8 @@ const showList = () => {
   return (list.innerHTML = movies);
 };
 
-const consoleMovie = (e) => {
-  return console.log(list.querySelector(e.currentTarget));
-};
+// const consoleMovie = (e) => {
+//   return console.log(list.querySelector(e.currentTarget));
+// };
 
 btn.addEventListener('click', showList);
-list.addEventListener('click', consoleMovie);

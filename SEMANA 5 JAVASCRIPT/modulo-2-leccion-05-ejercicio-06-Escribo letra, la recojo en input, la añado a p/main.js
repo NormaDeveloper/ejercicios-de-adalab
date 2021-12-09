@@ -9,4 +9,4 @@ const pressKey = (e) => {
   p.innerHTML = e.currentTarget.value;
 };
 
-input.addEventListener('keypress', pressKey);
+input.addEventListener('keyup', pressKey);

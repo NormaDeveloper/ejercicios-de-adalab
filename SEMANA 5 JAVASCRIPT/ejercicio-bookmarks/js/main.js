@@ -1,36 +1,48 @@
-"use strict"
+'use strict';
 
-const listLinks = document.querySelector(".js_datalist");
+const listLinks = document.querySelector('.js_datalist');
 
-const bmk_1_url = "https://books.adalab.es/materiales-del-curso-n/-MdR6Gp68BX20m1pi0z2/modulo-2-programando-la-web/javascript/2_1_intro_a_la_programacion";
-const bmk_1_desc = "JS en los materiales de Adalab";
+const bmk_1_url =
+  'https://books.adalab.es/materiales-del-curso-n/-MdR6Gp68BX20m1pi0z2/modulo-2-programando-la-web/javascript/2_1_intro_a_la_programacion';
+const bmk_1_desc = 'JS en los materiales de Adalab';
 
+const bmk_2_url =
+  'https://thesmartcoder.dev/9-awesome-projects-you-can-build-with-vanilla-javascript/';
+const bmk_2_desc = 'Ideas de proyectos JS';
 
-const bmk_2_url = "https://thesmartcoder.dev/9-awesome-projects-you-can-build-with-vanilla-javascript/";
-const bmk_2_desc = "Ideas de proyectos JS";
+const bmk_3_url =
+  'https://books.adalab.es/materiales-del-curso-n/-MdR6Gp68BX20m1pi0z2/modulo-1-html-y-css/1_1_intro_a_la_web';
+const bmk_3_desc = 'HTML en los materiales de Adalab';
 
+const section = document.querySelector('.js-section');
+const input_search_desc = document.querySelector('.js_in_search_desc');
 
-const bmk_3_url = "https://books.adalab.es/materiales-del-curso-n/-MdR6Gp68BX20m1pi0z2/modulo-1-html-y-css/1_1_intro_a_la_web"
-const bmk_3_desc = "HTML en los materiales de Adalab";
+//  ------------------ JUEVES 9 DIC------------
 
+// Haz una función (podemos llamarla handleClickLinkDropdown) que muestra u oculta el menú colapsable dependiendo de su estado actual. Agrega un evento para cuando damos click en el botón hamburguesa.
 
-const section = document.querySelector(".js-section");
-const input_search_desc = document.querySelector(".js_in_search_desc");
+/*  el MENÚ hamburguesa */
+const menuDropdown = document.querySelector('.js_menu_dropdown');
 
+//ICONO menú hamburguesa
+const linkDropdown = document.querySelector('.js_link_dropdown');
 
+function toggleDropDownMenu() {
+  menuDropdown.classList.toggle('collapsed');
+}
 
+//  Se escucha el click en el ICONO del botón hamburguesa
+// para mostrar u ocultar el menú dropdown.
+linkDropdown.addEventListener('click', handleClickLinkDropdown);
 
-/* Muestra el menú hamburguesa */
-const menuDropdown = document.querySelector('.js-menudropdown');
-menuDropdown.classList.remove('collapsed');
-
+function handleClickLinkDropdown(event) {
+  event.preventDefault();
+  toggleDropDownMenu();
+}
 
 /*Simulamos que escribe la usuaria en el input */
-input_search_desc.value = "materiales";
+input_search_desc.value = 'materiales';
 const descrSearchText = input_search_desc.value;
-
-
-
 
 // Ej. 3 Bonus: Validar la columna de las categorías de los enlaces: Si el enlace no tiene categoría mostraremos el mensaje No tiene categorías
 
@@ -41,41 +53,34 @@ const bmk_2_tags_2 = 'portfolio';
 const bmk_3_tags_1 = 'HTML';
 const bmk_3_tags_2 = 'CSS';
 
-const noTag = `<p class='item__tags'>No tiene</p>`
+const noTag = `<p class='item__tags'>No tiene</p>`;
 
-let ulTags1 =`<ul class="item__tags .js-item-tags">
+let ulTags1 = `<ul class="item__tags .js-item-tags">
 <li class="item__tag .js-item-tag">${bmk_1_tags_1.toLowerCase()}</li>
 <li class="item__tag .js-item-tag">${bmk_1_tags_2.toLowerCase()}</li>
-</ul>`
+</ul>`;
 
-let ulTags2 =`<ul class="item__tags">
+let ulTags2 = `<ul class="item__tags">
 <li class="item__tag">${bmk_2_tags_1.toLowerCase()}</li>
  <li class="item__tag">${bmk_2_tags_2.toLowerCase()}</li>
-</ul>`
+</ul>`;
 
-let ulTags3 =`<ul class="item__tags">
+let ulTags3 = `<ul class="item__tags">
 <ul class="item__tags ">
     <li class="item__tag">${bmk_3_tags_1.toLowerCase()}</li><li class="item__tag">${bmk_3_tags_2.toLowerCase()}</li>
-  </ul>`
+  </ul>`;
 
-
-  function hasTags () {
-  if ((bmk_1_tags_1 === '') && (bmk_1_tags_2 === '')) {
+function hasTags() {
+  if (bmk_1_tags_1 === '' && bmk_1_tags_2 === '') {
     ulTags1 = noTag;
+  } else if (bmk_2_tags_1 === '' && bmk_2_tags_2 === '') {
+    ulTags2 = noTag;
+  } else if (bmk_3_tags_1 === '' && bmk_3_tags_2 === '') {
+    ulTags3 = noTag;
   }
-
-  else if ((bmk_2_tags_1 === '') && (bmk_2_tags_2 === '')) {
-      ulTags2 = noTag;
-    }
-  
-    else if ((bmk_3_tags_1 === '') && (bmk_3_tags_2 === '')) {
-      ulTags3 = noTag;
-    }
 }
 
-hasTags ();
-
-
+hasTags();
 
 // Ej 4. BONUS. Cambia el valor de la variable bmk_1_seen a true o false. En dependencia de este valor muestra seleccionado o no el input de tipo checkbox.
 
@@ -87,28 +92,20 @@ const check1 = bmk_1_seen === true ? 'checked' : '';
 const check2 = bmk_2_seen === true ? 'checked' : '';
 const check3 = bmk_3_seen === true ? 'checked' : '';
 
-
-
 /*  Mostrar lista o tabla */
 
-if(section.classList.contains('tableview')) {
+if (section.classList.contains('tableview')) {
   section.classList.remove('tableview');
   section.classList.add('listview');
-}
-else if (section.classList.contains('listview')){
+} else if (section.classList.contains('listview')) {
   section.classList.remove('listview');
   section.classList.add('tableview');
 }
 
-
-
-let html = ''
-
-
-
+let html = '';
 
 if (bmk_1_desc.includes(descrSearchText)) {
-html = `<li class="data__listitem"> 
+  html = `<li class="data__listitem"> 
 <article class="data__item">
   <p class="item__url">
     <a href= ${bmk_1_url} target="_blank" rel="noopener noreferrer">
@@ -124,13 +121,12 @@ html = `<li class="data__listitem">
 </li>`;
 }
 
-
-if( bmk_2_desc.includes(descrSearchText) ) {
-html += `<li class="data__listitem"> 
+if (bmk_2_desc.includes(descrSearchText)) {
+  html += `<li class="data__listitem"> 
 <article class="data__item">
   <p class="item__url">
     <a href= ${bmk_2_url} target="_blank" rel="noopener noreferrer">
-    ${bmk_2_url.replace("https://", "")}
+    ${bmk_2_url.replace('https://', '')}
     </a>
   </p>
   <p class="item__seen">
@@ -143,9 +139,8 @@ html += `<li class="data__listitem">
 </li>`;
 }
 
-
 if (bmk_3_desc.includes(descrSearchText)) {
-html += `<li class="data__listitem"> 
+  html += `<li class="data__listitem"> 
 <article class="data__item">
   <p class="item__url">
     <a href=${bmk_3_url} target="_blank" rel="noopener noreferrer">
@@ -161,9 +156,4 @@ html += `<li class="data__listitem">
 </li>`;
 }
 
-
-
 listLinks.innerHTML = html;
-
-
-
