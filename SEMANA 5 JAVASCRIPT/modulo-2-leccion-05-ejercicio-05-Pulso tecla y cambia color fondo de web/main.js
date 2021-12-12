@@ -18,4 +18,4 @@ const pressKey = (e) => {
   console.log(e);
 };
 
-document.addEventListener('keydown', pressKey);
+document.addEventListener('keyup', pressKey);
