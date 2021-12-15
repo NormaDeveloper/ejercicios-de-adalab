@@ -24,7 +24,7 @@
       <header class="header">
         <nav class="header__menu">
           <a
-            class="header__menulink js_link_dropdown"
+            class="header__menulink"
             href=""
             title="Mostrar opciones de filtrado y visualización"
           >
@@ -33,13 +33,13 @@
         </nav>
         <h1 class="header__title">Ada-bookmarks</h1>
       </header>
-      <form class="menudropdown collapsed js_menu_dropdown">
+      <form class="menudropdown collapsed js-menudropdown">
         <fieldset class="menu__data-search">
           <h2 class="menu__title">Búsqueda</h2>
           <label class="data-search__epigraph" for="search_desc"
             >Buscar por descripción:
             <input
-              class="data-search__tag js_in_search_desc"
+              class="data-search__tag"
               type="text"
               name="search_desc"
               id="search_desc"
@@ -109,7 +109,7 @@
       </form>
       <main class="main">
         <h2>Lista de enlaces</h2>
-        <section class="data listview js-section">
+        <section class="data tableview">
           <div class="data__header">
             <div>URL</div>
             <div>Leída</div>
