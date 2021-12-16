@@ -24,6 +24,9 @@ const tasks = [
   },
 ];
 
+let totalTasks = document.querySelector('.js_totalTasks');
+let completedTasks = document.querySelector('.js_completedTasks');
+let toDoTasks = document.querySelector('.js_toDoTasks');
 let list = document.querySelector('.js_list');
 const inputChecked = `<input type="checkbox"  checked name="task_seen" id="task_seen" class="js_input" />`;
 const inputNotChecked = `<input type="checkbox"  name="task_seen" id="task_seen" class="js_input" />`;
@@ -52,15 +55,12 @@ console.log({ inputChekbox });
 function handleCheckbox() {
   const it = list.querySelectorAll('.js_li');
   for (let i = 0; i < tasks.length; i++) {
-    console.log('holiii');
     if (inputChekbox[i].checked === false) {
-      console.log('iffffffff');
       it[i].classList.remove('completed');
-      inputChekbox[i].completed = false;
-    } else {
-      console.log('elseeeeee');
-      it[i].classList.add('completed');
       inputChekbox[i].completed = true;
+    } else {
+      it[i].classList.add('completed');
+      inputChekbox[i].completed = false;
     }
     console.log('completada --->' + inputChekbox[i].completed);
   }
@@ -69,3 +69,28 @@ function handleCheckbox() {
 for (let i = 0; i < tasks.length; i++) {
   inputChekbox[i].addEventListener('click', handleCheckbox);
 }
+
+//---------
+let totalT = '';
+
+function getTotal() {
+  for (let i = 0; i < tasks.length; i++) {
+    totalT++;
+  }
+  return;
+}
+getTotal();
+console.log({ totalT });
+
+//---------
+let toDoTotal = '';
+function getDoneTasks() {
+  for (let i = 0; i < tasks.length; i++) {
+    if (inputChekbox[i].checked) {
+      toDoTotal++;
+    }
+    return;
+  }
+}
+getDoneTasks();
+console.log({ toDoTotal });
