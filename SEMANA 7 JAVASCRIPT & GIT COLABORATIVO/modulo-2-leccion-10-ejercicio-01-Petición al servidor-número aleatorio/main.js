@@ -5,8 +5,10 @@
 
 fetch('https://api.rand.fun/number/integer')
   .then(function (response) {
+    console.log({ response });
     return response.json();
   })
   .then(function (data) {
     document.body.innerHTML = data.result;
+    console.log({ data });
   });
