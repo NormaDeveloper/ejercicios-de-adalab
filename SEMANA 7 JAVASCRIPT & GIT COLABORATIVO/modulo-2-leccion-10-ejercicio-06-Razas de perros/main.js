@@ -11,12 +11,12 @@ const breedTitle = document.querySelector('.js_breed');
 
 function handleGetDogs() {
   //petición al api para obtener número aleatorio
-  fetch('https://api.rand.fun/number/integer')
+  fetch('https://api.rand.fun/number/integer?max=94')
     .then((numResponse) => numResponse.json())
     .then((numData) => {
       const num = numData.result;
       //petición al api para obtener lista de perros
-      return fetch('https://dog.ceo/api/breeds/list/all')
+      return fetch('https://dog.ceo/api/breeds/list')
         .then((listResponse) => listResponse.json())
         .then((listData) => {
           const breedList = listData.message;
@@ -33,26 +33,7 @@ function handleGetDogs() {
               img.src = dogImg;
             });
         });
-    });
+    })
+    .catch((error) => console.log(`Ha sucedido un error: ${error}`));
 }
-
 window.addEventListener('load', handleGetDogs);
-
-//`https://dog.ceo/api/breed/${chosenBreed}/images/random`
-
-// fetch('https://api.rand.fun/number/integer')
-//     .then((numResponse) => numResponse.json())
-//     .then(async (numData) => {
-//       let num = numData.result;
-//       //petición al api para obtener lista de perros
-//       const listResponse = await fetch('https://dog.ceo/api/breeds/list/all');
-//       const listData = await listResponse.json();
-//       const chosenBreed = listData[num];
-//       breedTitle.innerHTML = chosenBreed;
-//       //petición al api para obtener imagen de la raza que seleccionada previamente
-//       const url = 'https://dog.ceo/api/breed/' + chosenBreed + '/images/random';
-//       const imgResponse = await fetch(url);
-//       const imgData = await imgResponse.json();
-//       const dogImg = imgData.message;
-//       img.src = dogImg;
-//     });
