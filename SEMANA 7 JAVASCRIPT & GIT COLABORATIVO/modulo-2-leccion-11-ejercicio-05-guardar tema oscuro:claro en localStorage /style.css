@@ -1,0 +1,9 @@
+.light {
+  background-color: rgb(167, 204, 204);
+  color: rgb(14, 50, 51);
+}
+
+.dark {
+  background-color: rgb(14, 50, 51);
+  color: azure;
+}
