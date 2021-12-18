@@ -8,7 +8,7 @@ const btn = document.querySelector('.js_btn');
 function handleGetCharacter() {
   if (localStorage.getItem(searchInput.value) !== null) {
     list.innerHTML = JSON.parse(localStorage.getItem(searchInput.value));
-    console.log('Recupero el dato de la caché');
+    console.log('Obtengo el dato de la caché');
   } else {
     fetch(`https://swapi.py4e.com/api/people/?search=${searchInput.value}`)
       .then((response) => response.json())
@@ -18,11 +18,10 @@ function handleGetCharacter() {
         for (let i = 0; i < characters.length; i++) {
           listData += `<li>Nombre: ${characters[i].name} Género: ${characters[i].gender} </li>`;
         }
-        console.log(listData);
-        list.innerHTML = listData;
-      });
 
-    localStorage.setItem(searchInput.value, JSON.stringify(listData));
+        list.innerHTML = listData;
+        localStorage.setItem(searchInput.value, JSON.stringify(listData));
+      });
   }
 }
 btn.addEventListener('click', handleGetCharacter);
