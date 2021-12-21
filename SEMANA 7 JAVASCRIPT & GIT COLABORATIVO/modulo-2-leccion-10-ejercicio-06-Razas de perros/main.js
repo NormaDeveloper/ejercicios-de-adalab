@@ -34,6 +34,7 @@ function handleGetDogs() {
             });
         });
     })
+    //Puedo poner .catch en cualquier parte de la promesa (después de un .then, después de algo que quiero ver exactamente cómo me llega)
     .catch((error) => console.log(`Ha sucedido un error: ${error}`));
 }
 window.addEventListener('load', handleGetDogs);
