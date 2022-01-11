@@ -15,7 +15,6 @@ const orgName = document.querySelector('.js_orgName');
 const repositories = document.querySelector('.js_repositories');
 
 function handleGetGithubRepos() {
-  //añado el parámatero del input a la url porque no permite interpolación
   let url = 'https://api.github.com/orgs/' + textInput.value;
   fetch(url)
     .then((orgResponse) => orgResponse.json())

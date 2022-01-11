@@ -1,0 +1,22 @@
+.main {
+  background-color: #3cdbc0;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #ffffff;
+
+  & .title {
+    text-transform: capitalize;
+    word-spacing: 100vw;
+    text-align: center;
+    font-size: 30px;
+  }
+
+  @media all and (min-width: 768px) {
+    & .title {
+      font-size: 40px;
+    }
+  }
+}

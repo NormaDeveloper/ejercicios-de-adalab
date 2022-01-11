@@ -19,7 +19,3 @@ const incidenceUser = users.find((user) => {
 });
 
 console.log(incidenceUser);
-
-// function checkIncidence(user){
-//   let incidenceUser =
-// }
