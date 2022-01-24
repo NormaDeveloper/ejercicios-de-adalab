@@ -1,0 +1,16 @@
+.modal-window {
+  width: 250px;
+  height: 100px;
+}
+
+.children-text {
+  display: none;
+}
+.sign {
+  background-color: chartreuse;
+}
+.sign:hover ~ .children-text {
+  display: block;
+  transform: translate(100px, -50px);
+  background-color: rgb(244, 136, 12);
+}
