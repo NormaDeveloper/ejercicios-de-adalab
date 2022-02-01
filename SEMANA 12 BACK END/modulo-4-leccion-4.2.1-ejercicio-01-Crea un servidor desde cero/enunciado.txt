@@ -1,0 +1,53 @@
+1. Pasos para crear un servidor con Express JS
+Crea un proyecto o repo.
+Crea un package.json usando npm init o creándolo a mano.
+Instala el módulo express ejecutando en la terminal npm install express.
+Para saber que lo has hecho bien, dentro del fichero package.json debe aparecer express dentro de dependencies.
+Instala el módulo cors ejecutando en la terminal npm install cors.
+Para saber que lo has hecho bien, dentro del fichero package.json debe aparecer cors dentro de dependencies.
+Crea un fichero index.js dentro de la carpeta src donde programarás el servidor.
+Para arrancar, haz una de las siguientes cosas:
+Ejecuta el comando node src/index.js o
+Añade al package.json el script:
+"scripts": {
+  "start": "node src/index.js"
+}
+y ejecuta el comando npm start para que en consola se ejecute node src/index.js. También puedes añadir al package.json los scripts:
+"scripts": {
+  "start": "node src/index.js",
+  "dev": "nodemon src/index.js"
+}
+y ejecutar el comando npm run dev para que en consola se ejecute nodemon src/index.js y que se reinicie el servidor con cada cambio.
+
+-------
+
+2. Añade al fichero index.js las líneas de código:
+
+const express = require("express");
+const cors = require("cors");
+
+const server = express();
+
+server.use(cors());
+server.use(express.json());
+
+const serverPort = 3000;
+server.listen(serverPort, () => {
+  console.log(`Server listening at http://localhost:${serverPort}`);
+});
+
+server.get("/users", (req, res) => {
+  const response = {
+    users: [{ name: "Sofía" }, { name: "María" }],
+  };
+  res.json(response);
+});
+
+-----------
+
+3. Entra en http://localhost:3000/users desde Chrome
+
+4. Verás que el navegador muestra el JSON con la respuesta del servidor { users: [...] }.
+
+----
+Nota: recuerda que cada vez que hagas un cambio en los ficheros de tu servidor, debes parar el servidor con Ctrl+C y volver a arrancarlo.
