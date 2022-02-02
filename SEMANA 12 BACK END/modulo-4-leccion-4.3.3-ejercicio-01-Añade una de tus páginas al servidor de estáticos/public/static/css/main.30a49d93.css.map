@@ -1,0 +1,1 @@
+{"version":3,"file":"static/css/main.30a49d93.css","mappings":"AAAA,MACE,2CAAmB","sources":["styles/App.scss"],"sourcesContent":[".dark {\n  filter: invert(0.3);\n}\n"],"names":[],"sourceRoot":""}
